@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace EQueue.Data;
+namespace EQueue.DataAccess;
 
 public class ApplicationDbContext : IdentityDbContext
 {

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using EQueue.Data;
+using EQueue.DataAccess;
 
 var builder = WebApplication.CreateBuilder(args);
 
