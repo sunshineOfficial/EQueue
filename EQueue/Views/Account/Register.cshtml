@@ -1,48 +1,53 @@
 @model EQueue.Models.RegisterViewModel
 
 @{
-    Layout = "_Layout";
+    ViewData["Title"] = "Настройки аккаунта";
 }
 
-<h2>Регистрация</h2>
+<h2 class="mb-3">Регистрация</h2>
 <form method="post" asp-controller="Account" asp-action="Register">
     <div asp-validation-summary="ModelOnly"></div>
-    <div>
-        <label asp-for="Email"></label><br />
-        <input asp-for="Email" />
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control"/>
+        <div id="emailHelp" class="form-text">Обязательно</div>
         <span asp-validation-for="Email"></span>
     </div>
-    <div>
-        <label asp-for="Name"></label><br />
-        <input asp-for="Name" />
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control"/>
+        <div id="nameHelp" class="form-text">Обязательно</div>
         <span asp-validation-for="Name"></span>
     </div>
-    <div>
-        <label asp-for="Surname"></label><br />
-        <input asp-for="Surname" />
+    <div class="mb-3">
+        <label asp-for="Surname" class="form-label"></label>
+        <input asp-for="Surname" class="form-control"/>
+        <div id="surnameHelp" class="form-text">Обязательно</div>
         <span asp-validation-for="Surname"></span>
     </div>
-    <div>
-        <label asp-for="Patronymic"></label><br />
-        <input asp-for="Patronymic" />
+    <div class="mb-3">
+        <label asp-for="Patronymic" class="form-label"></label>
+        <input asp-for="Patronymic" class="form-control"/>
         <span asp-validation-for="Patronymic"></span>
     </div>
-    <div>
-        <label asp-for="Birthday"></label><br />
-        <input asp-for="Birthday" />
+    <div class="mb-3">
+        <label asp-for="Birthday" class="form-label"></label>
+        <input asp-for="Birthday" class="form-control"/>
         <span asp-validation-for="Birthday"></span>
     </div>
-    <div>
-        <label asp-for="Password"></label><br />
-        <input asp-for="Password" />
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label"></label>
+        <input asp-for="Password" class="form-control"/>
+        <div id="passwordHelp" class="form-text">Обязательно</div>
         <span asp-validation-for="Password"></span>
     </div>
-    <div>
-        <label asp-for="PasswordConfirm"></label><br />
-        <input asp-for="PasswordConfirm" />
+    <div class="mb-3">
+        <label asp-for="PasswordConfirm" class="form-label"></label>
+        <input asp-for="PasswordConfirm" class="form-control"/>
+        <div id="passwordConfirmHelp" class="form-text">Обязательно</div>
         <span asp-validation-for="PasswordConfirm"></span>
     </div>
-    <div>
-        <input type="submit" value="Регистрация" />
+    <div class="mb-3">
+        <input type="submit" value="Регистрация" class="btn btn-primary"/>
     </div>
 </form>

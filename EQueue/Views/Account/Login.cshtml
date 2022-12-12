@@ -1,28 +1,28 @@
 @model EQueue.Models.LoginViewModel
 
 @{
-    Layout = "_Layout";
+    ViewData["Title"] = "Вход";
 }
 
-<h2>Вход</h2>
+<h2 class="mb-3">Вход</h2>
 <form method="post" asp-controller="Account" asp-action="Login"
       asp-route-returnUrl="@Model.ReturnUrl">
     <div asp-validation-summary="ModelOnly"></div>
-    <div>
-        <label asp-for="Email"></label><br />
-        <input asp-for="Email" />
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" class="form-control"/>
         <span asp-validation-for="Email"></span>
     </div>
-    <div>
-        <label asp-for="Password"></label><br />
-        <input asp-for="Password" />
+    <div class="mb-3">
+        <label asp-for="Password" class="form-label"></label>
+        <input asp-for="Password" class="form-control"/>
         <span asp-validation-for="Password"></span>
     </div>
-    <div>
-        <label asp-for="RememberMe"></label><br />
-        <input asp-for="RememberMe" />
+    <div class="mb-3">
+        <input asp-for="RememberMe" class="form-check-input"/>
+        <label asp-for="RememberMe" class="form-check-label"></label>
     </div>
-    <div>
-        <input type="submit" value="Войти" />
+    <div class="mb-3">
+        <input type="submit" value="Войти" class="btn btn-primary"/>
     </div>
 </form>
