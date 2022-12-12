@@ -8,12 +8,21 @@
 
     <ItemGroup>
       <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.8" />
+      <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.8" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.8" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.8">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.7" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\EQueue.Domain\EQueue.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Migrations" />
     </ItemGroup>
 
 </Project>
